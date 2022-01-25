@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Coding Quiz</title>
-</head>
-<body>
-    
-<h1>Test your knowledge and beat your HIGHSCORE with this </h1>
-<h2 id="main-title">Coding Quiz!</h2>
+  </head>
+  <body class="container">
+    <section class="main-title">
+    <h1>Test your knowledge and beat your HIGHSCORE with this</h1>
+    <h2>Coding Quiz!</h2>
+  </section>
 
-<aside class="timer-container">
-    <h2 class="time-left">Time Left</h2> 
-    <div id="timer"></div>      
-</aside>
-
-<section>
- 
-    <div class="container" hidden>
-        <h3 class="question">What is...</h3>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <aside>
+      <div class="timer-container">
+      <h2 class="time-left">Time Left</h2>
+      <div id="timer"></div>
+    </div><br>
+    <div class="score-container">
+      <h2>SCORE</h2>
+      <div class="score">
+        0
+      </div>
     </div>
+    </aside>
 
-</section>
 
-<section hidden>
-    <div id="scoreboard">SCOREBOARD
+      <div class="splash-screen" style="display: block">
+        <button type="button" id="play-button">PLAY</button><br>
+        <button type="button" id="highscore-button">HIGHSCORES</button>
+      </div>
+      <div id="questions-container" style="display: none">
+        <h3 class="question" id="questions" ></h3>
+        <div class="answers">
+            <button id="a1"></button>
+            <button id="a2"></button>
+            <button id="a3"></button>
+            <button id="a4"></button>
+        </div>
+      </div>
+<!-- 
+      <div class="question-container" hidden>
+        <h3 class="question" id="question-2" >What is...</h3>
+        <ul class="form">
+            <input type="radio" id="a1" name="what" value="A1">
+            <label for="a1">answer 1</label><br>
+            <input type="radio" id="a2" name="what" value="A2">
+            <label for="a2">answer 2</label><br>
+            <input type="radio" id="a3" name="what" value="A3">
+            <label for="a3">answer 3</label><br>
+            <input type="radio" id="a4" name="what" value="A4">
+            <label for="a4">answer 4</label><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
 
-    </div>
+      <div class="question-container" hidden>
+        <h3 class="question" id="question-3" >What is...</h3>
+        <ul class="form">
+            <input type="radio" id="a1" name="what" value="A1">
+            <label for="a1">answer 1</label><br>
+            <input type="radio" id="a2" name="what" value="A2">
+            <label for="a2">answer 2</label><br>
+            <input type="radio" id="a3" name="what" value="A3">
+            <label for="a3">answer 3</label><br>
+            <input type="radio" id="a4" name="what" value="A4">
+            <label for="a4">answer 4</label><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
 
-</section>
+      <div class="question-container" hidden>
+        <h3 class="question" id="question-4" >What is...</h3>
+        <ul class="form">
+            <input type="radio" id="a1" name="what" value="A1">
+            <label for="a1">answer 1</label><br>
+            <input type="radio" id="a2" name="what" value="A2">
+            <label for="a2">answer 2</label><br>
+            <input type="radio" id="a3" name="what" value="A3">
+            <label for="a3">answer 3</label><br>
+            <input type="radio" id="a4" name="what" value="A4">
+            <label for="a4">answer 4</label><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
 
-</body>
+      <div class="question-container" hidden>
+        <h3 class="question" id="question-5" >What is...</h3>
+        <ul class="form">
+            <input type="radio" id="a1" name="what" value="A1">
+            <label for="a1">answer 1</label><br>
+            <input type="radio" id="a2" name="what" value="A2">
+            <label for="a2">answer 2</label><br>
+            <input type="radio" id="a3" name="what" value="A3">
+            <label for="a3">answer 3</label><br>
+            <input type="radio" id="a4" name="what" value="A4">
+            <label for="a4">answer 4</label><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div> -->
+    </section>
+
+    <section hidden>
+      <h4>SCOREBOARD</h4>
+      <div class="score-container">
+          <div id="scoreboard">
+
+          </div>
+      </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
