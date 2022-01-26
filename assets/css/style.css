@@ -12,7 +12,7 @@ body {
     color: var(--l-pink);
     font-size: 5vh;
 }
-.container {
+/* .container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -36,7 +36,7 @@ body {
 #timer {
     text-align: center;
 }
-#question1-container {
+.question1-container {
     grid-area: 2 / 2 / 3 / 3;
     text-align: center;
 }
@@ -60,10 +60,30 @@ aside {
     flex-direction: column;
     float: left;
 }
-/* .form {
+.form {
     text-align: center;
-} */
+}
 #question1-container {
     display: none;
     text-align: center;
+} */
+
+.main-title h1 {
+    display: block;
+    text-align: center;
+}
+.main-title h2 {
+    display: block;
+    text-align: center;
+}
+.splash-screen, 
+#questions-container, 
+#initials, 
+#scoreboard {
+    text-align: center;
+    margin-top: 5%;
+}
+#initials input {
+    display: block;
+    margin: 0 auto;
 }

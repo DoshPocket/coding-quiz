@@ -6,14 +6,12 @@ let highscoreButton = document.querySelector("#highscore-button");
 let form = document.querySelector(".form");
 let questionContainer = document.querySelector("#questions-container");
 let questionEl = document.querySelector("#questions");
-let a1 = document.querySelector("#a1");
-let a2 = document.querySelector("#a2");
-let question5 = document.querySelector("#question-5");
 let scoreboard = document.querySelector("#scoreboard");
 let splash = document.querySelector(".splash-screen");
 let answers = document.querySelector(".answers");
-// let userName = document.querySelector("#user-name");
-let initials = document.querySelector("#initials")
+let userName = document.querySelector("#user-name");
+let initials = document.querySelector("#initials");
+let userScores = document.querySelector("#user-scores");
 
 let quizContent = [ 
     {
@@ -128,11 +126,7 @@ playButton.addEventListener('click', setTime);
 
     //add event listener to become legend button
     //make separate function for grabbing and saving initials after endquiz before scorebaord
-    function saveUserName(){
-        let userName = document.querySelector("#user-name");
 
-        localStorage.setItem("userName", userName.textContent);
-    }
 
     function endQuiz(){
         let userName = document.querySelector("#user-name");
@@ -149,11 +143,30 @@ playButton.addEventListener('click', setTime);
 
     }
 
-    // function displayScoreboard(){
+    function saveUserName(){
+        let userName = document.querySelector("#user-name");
+
+        localStorage.setItem("userName", userName.value);
+        console.log(userName.value);
+
+    }
+    highscoreButton.addEventListener('click', function() {
+        hide(splash);
+        displayScoreboard();
+      });
+
+    function displayScoreboard(){
+            // return localStorage.getItem('userName', 'score');
+            document.querySelector("#player-name").innerHTML = localStorage.userName;
+            document.querySelector("#user-scores").innerHTML = localStorage.score;
+            console.log(localStorage.userName);
+            show(scoreboard);
+            // highscoreButton()
+        
+            // return localStorage.getItem('score')
+
         // JSONparse.getItem(key)
 
-    // }
-//   highscoreButton.addEventListener('click', function() {
-//     score;
-//   });
+    }
+
 
