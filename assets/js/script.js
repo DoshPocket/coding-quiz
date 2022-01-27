@@ -1,3 +1,4 @@
+//variables defined
 let container = document.querySelector(".container");
 let timer = document.querySelector("#timer");
 let score = document.querySelector(".score");
@@ -13,6 +14,7 @@ let userName = document.querySelector("#user-name");
 let initials = document.querySelector("#initials");
 let userScores = document.querySelector("#user-scores");
 
+//quiz questions and answers
 let quizContent = [ 
     {
     question: "Which of the following is NOT a primitive type?",
@@ -68,6 +70,7 @@ let quizContent = [
 
 let secondsLeft = 60;
 
+//starts quiz upon clicking PLAY button and starts 60 second timer
 playButton.addEventListener('click', setTime);
     function setTime() {
         var timerInterval = setInterval(function() {
@@ -105,14 +108,13 @@ playButton.addEventListener('click', setTime);
         }
     
     }
+    //awards or deducts time based on answer
     function nextQuestion(event){ 
         if (event.target.textContent === quizContent[quizIndex].answer){
             secondsLeft+=5;
         } else {
             secondsLeft-=10;
         }
-        //recognize answers using event.target
-        //give score, decrease time if wrong
 
         if (quizIndex < quizContent.length-1){ 
             quizIndex++; 
@@ -121,13 +123,7 @@ playButton.addEventListener('click', setTime);
             endQuiz();
         }
     }
-
-    // let  = localStorage.getItem("score");
-
-    //add event listener to become legend button
-    //make separate function for grabbing and saving initials after endquiz before scorebaord
-
-
+    //savees player score to local storage
     function endQuiz(){
         let userName = document.querySelector("#user-name");
         console.log(userName)
@@ -139,34 +135,24 @@ playButton.addEventListener('click', setTime);
         localStorage.getItem("score");
         localStorage.setItem("userName", userName.textContent);
         console.log(userName.textContent)
-        // displayScoreboard();
-
     }
-
+    //saves player name to local stoage
     function saveUserName(){
         let userName = document.querySelector("#user-name");
 
         localStorage.setItem("userName", userName.value);
         console.log(userName.value);
-
     }
     highscoreButton.addEventListener('click', function() {
         hide(splash);
         displayScoreboard();
       });
-
+    //retrieves and displays player name and score
     function displayScoreboard(){
-            // return localStorage.getItem('userName', 'score');
             document.querySelector("#player-name").innerHTML = localStorage.userName;
             document.querySelector("#user-scores").innerHTML = localStorage.score;
             console.log(localStorage.userName);
             show(scoreboard);
-            // highscoreButton()
-        
-            // return localStorage.getItem('score')
-
-        // JSONparse.getItem(key)
-
     }
 
 

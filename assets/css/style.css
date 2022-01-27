@@ -12,62 +12,6 @@ body {
     color: var(--l-pink);
     font-size: 5vh;
 }
-/* .container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    grid-template-areas: 
-    "timer title title"
-    "score question question"
-    "score question question";
-}
-.main-title {
-    grid-area: title;
-}
-.splash-screen {
-    grid-area: 2 / 2 / 3 / 3;
-    justify-content: center;
-}
-.timer-container {
-    grid-area: 1 / 1 / 3 / 2;
-}
-#timer {
-    text-align: center;
-}
-.question1-container {
-    grid-area: 2 / 2 / 3 / 3;
-    text-align: center;
-}
-.score-container {
-    grid-area: 2 / 1 / 3 / 2;
-    justify-content: center;
-}
-.score {
-    text-align: center;
-}
-h1 {
-    display: block;
-    text-align: center;
-}
-h2 {
-    display: block;
-    text-align: center;
-}
-aside {
-    display: flex;
-    flex-direction: column;
-    float: left;
-}
-.form {
-    text-align: center;
-}
-#question1-container {
-    display: none;
-    text-align: center;
-} */
-
 .main-title h1 {
     display: block;
     text-align: center;
